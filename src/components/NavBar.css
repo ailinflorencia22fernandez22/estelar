@@ -1,0 +1,21 @@
+container-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mostrar elementos de la lista en línea */
+}
+
+.menu-list li {
+    margin-right: 20px; /* Espacio entre elementos de la lista */
+}
+
+.logo img {
+    width: 50px; /* Tamaño del logo */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-left: 20px; /* Espacio entre el logo y los elementos de la lista */
+}
