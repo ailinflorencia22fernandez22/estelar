@@ -10,9 +10,11 @@ function App() {
    <div>
     <NavBar/>
     <ItemListContainer  saludo="Bienvenidos a lo Damian"/>
-        <h1>Hola Mundo</h1>
+      
    </div>
+    
   )
+
 }
 
 export default App
