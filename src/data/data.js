@@ -8,6 +8,7 @@ const products = [
         imagen:"https://i.pinimg.com/originals/14/6a/ef/146aefc5fb79233350f56d74401db7f8.jpg"
 
     },
+    
     {
         id: "sandwich2",
         nombre: "producto 2",
@@ -15,7 +16,15 @@ const products = [
         precio: 7200,
         stock: 5,
         imagen:"https://www.cucinare.tv/wp-content/uploads/2019/10/S%C3%A1ndwich-de-miga.jpg"
-    }
+    },
+    {
+        id: "sandwich3",
+        nombre: "producto 3",
+        descripcion: "sandwich de Roquefort",
+        precio: 7200,
+        stock: 5,
+        imagen:"https://i.ytimg.com/vi/qEHHVrV3tNA/maxresdefault.jpg"
+    },
 
 ]
 

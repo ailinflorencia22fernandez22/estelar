@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./NavBar.css";
 import getProducts from "../data/data";
+import ItemList from "./ItemList";
+import "./ItemListContainer.css";
 
 const ItemListContainer = (props) => {
    const [products, setProducts ] = useState([]);
@@ -22,21 +24,18 @@ const ItemListContainer = (props) => {
 
  
   return (
-    <>
+     <>
     
     <div className="props">
      <p>{props.saludo}</p>
-      {
-        products.map((product) =>(
-          <div key={product.id}>
-            <img src={product.imagen} />
-            <p>{product.nombre}</p>
-          </div>
-        ))
-      }
-
-      </div>
-     </>
+     </div>
+          <ItemList products ={products}/>
+            <div className="FondoImg">
+              <img src="https://st2.depositphotos.com/4393299/7057/v/950/depositphotos_70570845-stock-illustration-doodle-sandwich-seamless-pattern-background.jpg" />
+             </div>
+      
+     
+       </>
     
   )
 }
