@@ -2,16 +2,24 @@ import { useEffect, useState } from "react";
 import "./NavBar.css";
 import getProducts from "../data/data";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
+
 
 const ItemListContainer = (props) => {
    const [products, setProducts ] = useState([]);
+   const { idCategory } = useParams()
     
    useEffect(()=>{
 
     getProducts()
       .then((respuesta) => {
-        setProducts(respuesta);
+         if(idCategory){
+          const productsFilter = respuesta.filter((productRes)=> productRes.category === idCategory)
+          setProducts(productsFilter)
+         }else{
+           setProducts(respuesta);
+         }
     })
     .catch((error) => {
        console.error(error);
@@ -20,7 +28,7 @@ const ItemListContainer = (props) => {
        console.log("finalizo la promesa");
     });
 
-   },[]);
+   },[idCategory]);
 
  
   return (
@@ -30,9 +38,7 @@ const ItemListContainer = (props) => {
      <p>{props.saludo}</p>
      </div>
           <ItemList products ={products}/>
-            <div className="FondoImg">
-              <img src="https://st2.depositphotos.com/4393299/7057/v/950/depositphotos_70570845-stock-illustration-doodle-sandwich-seamless-pattern-background.jpg" />
-             </div>
+          <ItemCount stock={10}/>
       
      
        </>
