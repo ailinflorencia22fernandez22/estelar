@@ -38,9 +38,7 @@ const ItemListContainer = (props) => {
      <p>{props.saludo}</p>
      </div>
           <ItemList products ={products}/>
-          <ItemCount stock={10}/>
       
-     
        </>
     
   )

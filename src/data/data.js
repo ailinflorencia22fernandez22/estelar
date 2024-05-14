@@ -26,7 +26,8 @@ const products = [
         precio: 7200,
         stock: 5,
         category:"productos",
-        imagen:"https://i.ytimg.com/vi/qEHHVrV3tNA/maxresdefault.jpg"
+        imagen:"https://i.ytimg.com/vi/qEHHVrV3tNA/maxresdefault.jpg",
+        
     },
     
 ]
@@ -36,6 +37,8 @@ const getProducts = () => {
         setTimeout(() =>{
             resolve(products)
         }, 3000);
+       
     });
+    
 };
 export default getProducts 

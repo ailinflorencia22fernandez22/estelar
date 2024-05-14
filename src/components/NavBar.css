@@ -12,20 +12,22 @@
     display: flex; 
 }
 
-.menu-list li {
+.menu-list .categoria {
     font-size: 20px;
     color: black;
     margin-right: 20px; 
+    text-decoration: none;
 }
 
 .logo img {
     width: 50px;
     height: auto;
-     right: 0%;
+    right: 0%;
     margin-left: 20px; 
 }
 .cart{
     display: flex;
     margin: 20px;
 }
+
 
