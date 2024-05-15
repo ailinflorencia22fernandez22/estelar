@@ -25,9 +25,9 @@ const products = [
         descripcion: "sandwich de Roquefort",
         precio: 7200,
         stock: 5,
-        category:"productos",
-        imagen:"https://i.ytimg.com/vi/qEHHVrV3tNA/maxresdefault.jpg",
-        
+        category: "especiales",
+        imagen: "https://i.ytimg.com/vi/qEHHVrV3tNA/maxresdefault.jpg",
+
     },
     
 ]
