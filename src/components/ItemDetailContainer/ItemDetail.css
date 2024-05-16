@@ -1,18 +1,26 @@
 .item-detail-container {
-    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-  }
-  
-  .item-detail-image {
-    flex: 0 0 auto; /* Establece el tamaño automático para la imagen */
-    margin-right: 20px; /* Ajusta el margen derecho entre la imagen y el contenido */
-  }
-  
-  .item-detail-content {
-    flex: 1; /* Ocupa todo el espacio disponible */
-  }
-  
-  .item-detail-description {
-    margin-bottom: 20px; /* Agrega espacio debajo de la descripción */
-  }
+  display: flex; 
+  align-items: center; 
+}
+
+.item-detail-image {
+  flex: 0 0 auto; 
+  margin-right: 20px;
+}
+.item-detail-image img {
+  max-width: 100%; 
+  height: auto;
+  max-height: 300px; 
+}
+
+
+
+.item-detail-content {
+  flex: 1; 
+}
+
+.item-detail-description {
+  margin-bottom: 20px; 
+}
+
   

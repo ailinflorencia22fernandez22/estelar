@@ -1,28 +1,28 @@
 .boton, .boton-agregar {
-    background-color: #FFA500; /* Color de fondo naranja */
+    background-color: #FFA500; 
     border: none;
     color: white;
-    padding: 6px 12px; /* Reduce el padding para hacer los botones más pequeños */
+    padding: 6px 12px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px; /* Reduce el tamaño del texto */
-    margin-right: 10px; /* Ajusta el margen derecho para separar los botones */
+    font-size: 14px; 
+    margin-right: 10px; 
     cursor: pointer;
   }
   
   .boton:hover, .boton-agregar:hover {
-    background-color: #FF8C00; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #FF8C00;
   }
   
   .contenedor-botones {
-    margin-bottom: 20px; /* Agrega espacio debajo de los botones */
-    display: flex; /* Usa flexbox para alinear los botones horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
   }
   
   .boton-suma {
-    margin-left: 10px; /* Ajusta el margen izquierdo para separar los botones */
+    margin-left: 10px; /
   }
   
   
