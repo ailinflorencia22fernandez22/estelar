@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
         console.log("finalizo la promesa");
      });
 
-    }, []);
+    }, [idProduct]);
 
   return (
     <ItemDetail product={product}/>
