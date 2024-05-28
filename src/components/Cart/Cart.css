@@ -1,0 +1,9 @@
+.carritoCart {
+    display: flex;
+    margin-bottom: 20px; 
+    justify-content: space-around;
+}
+
+.imgCart {
+    max-width: 100px; 
+}
