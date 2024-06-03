@@ -8,16 +8,13 @@
     max-width: 300px; 
     display: inline-block; 
     box-sizing: border-box; 
+    
 }
 .itemProduct p {
     font-size: 20px;
     color: black;
     text-decoration: none;
 }
-.itemList p a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces dentro de los elementos de producto */
-}
-
 
 .itemProduct img {
     width: 100%;

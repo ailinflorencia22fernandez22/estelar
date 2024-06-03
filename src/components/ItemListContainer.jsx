@@ -1,43 +1,61 @@
 import { useEffect, useState } from "react";
 import "./NavBar.css";
-import getProducts from "../data/data";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import db from "../db/db.js";
 
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
    const [products, setProducts ] = useState([]);
+   const [loading, setLoading] = useState(false)
    const { idCategory } = useParams()
+
+   const getProducts = () => {
+      const productsRef = collection(db, "products" )
+      getDocs(productsRef)
+      .then((productsDb)=> {
+        const data = productsDb.docs.map((product)=> {
+           return { id: product.id, ...product.data() }
+         })
+         setProducts(data)
+      })
+   }
+
+   const getProductsByCategory = () => {
+      const productsRef = collection(db, "products" )
+      const q = query(productsRef, where("category", "==", idCategory))
+      getDocs(q)
+      .then((productsDb)=> {
+        const data = productsDb.docs.map((product)=> {
+           return { id: product.id, ...product.data() }
+         })
+         setProducts(data)
+      })
+   }
     
-   useEffect(()=>{
-
-    getProducts()
-      .then((respuesta) => {
-         if(idCategory){
-          const productsFilter = respuesta.filter((productRes)=> productRes.category === idCategory)
-          setProducts(productsFilter)
-         }else{
-           setProducts(respuesta);
-         }
-    })
-    .catch((error) => {
-       console.error(error);
-    })
-    .finally(() => {
-       console.log("finalizo la promesa");
-    });
-
-   },[idCategory]);
+    useEffect(()=>{
+      if(idCategory){
+        getProductsByCategory()
+      }else{
+        getProducts()
+      }
+      
+      
+    },[idCategory]);
 
  
   return (
      <>
     
     <div className="props">
-     <p>{props.saludo}</p>
+     <h5>{ idCategory ? `Filtrado por categoria: ${idCategory}` : "A lo Damian" }</h5>
      </div>
-          <ItemList products ={products}/>
+     {
+       loading ? <div>Cargando... </div> :   <ItemList products ={products}/>
+     }
+   
       
        </>
     

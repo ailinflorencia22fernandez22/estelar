@@ -7,3 +7,19 @@
 .imgCart {
     max-width: 100px; 
 }
+
+.mensaje {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ver-productos {
+    margin-top: 10px; 
+    color: orangered;
+    text-decoration: none;
+  }
+  
