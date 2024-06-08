@@ -1,7 +1,7 @@
 
 .idproduct{
-    background-color: rgba(128, 128, 128, 0.2); 
-    border: 1px solid gray; 
+    background-color:rgba(255, 165, 0, 0.5);
+    border: rgba(255, 165, 0, 0.5); 
     padding: 20px; 
     margin: 10px; 
     width: calc(50% - 20px);
@@ -10,6 +10,11 @@
     box-sizing: border-box; 
     
 }
+
+.idproduct:hover {
+    transform: scale(1.15);
+  }
+
 .itemProduct p {
     font-size: 20px;
     color: black;

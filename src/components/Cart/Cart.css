@@ -15,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: orangered;
   }
   
   .ver-productos {
@@ -22,4 +23,52 @@
     color: orangered;
     text-decoration: none;
   }
-  
+
+
+  .carritoCart {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex; 
+}
+
+.imgCart {
+    max-width: 100px;
+    max-height: 100px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+
+button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: auto; 
+}
+
+.carritoCart div {
+    margin-top: auto; 
+}
+
+
+
+.orange-link {
+  color: orangered; 
+  text-decoration: none; 
+  display: block; 
+  margin-bottom: 10px; 
+  font-size: 30px; 
+}
+
+.vaciar-button {
+  background-color: darkorange; 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block; 
+}
+
+

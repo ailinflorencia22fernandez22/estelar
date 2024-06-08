@@ -4,22 +4,18 @@ import ItemCount from './ItemCount'
 import "./ItemListContainer.css"
 
 
-const ItemList = ({products}) => {
+const ItemList = ({ products }) => {
   return (
     <div className='itemProduct'>
-        {
-        products.map((product) =>(
-            <div className='idproduct' key={product.id}>
-            <img src={product.imagen} />
-            <p>{product.nombre}</p>
-            <p>Precio:{product.precio}</p>
-            <Link to={"/detail/" + product.id}><p>Ver detalles</p></Link>
+      {products.map((product) => (
+        <Link to={"/detail/" + product.id} key={product.id} className='idproduct'>
+          <div>
+            <img src={product.imagen} alt={product.nombre} />
           </div>
-        ))
-      }
-
+        </Link>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default ItemList
+export default ItemList;
